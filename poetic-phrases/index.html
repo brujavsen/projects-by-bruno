@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetic Phrases</title>
+    <meta name="author" content="Bruno Sena">
+    <meta name="description" content="Poetic Phrases will you write">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Caprasimo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1;100;200;300;400;500;600&display=swap');
+        h1 {
+            text-shadow: 2px 2px 3px gray;
+            font-family: 'Belanosima', sans-serif;
+        }
+        body {
+            font-family: 'Ysabeau SC', sans-serif;
+        }
+    </style>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-orange-200 flex flex-col justify-center items-center h-screen w-auto">
+    <p id="spanish-v" class="cursor-pointer p-2 shadow-xl bg-indigo-300 hover:bg-indigo-700 hover:text-white transition-colors font-bold w-fit text-center rounded">Español</p>
+    <div class="flex flex-col justify-center items-center h-screen w-[90%] bg-orange-200">
+        <h1 class="text-center text-5xl text-indigo-600 relative bottom-[5%] md:bottom-[12%]" id="title">Say Your Best Phrase</h1>
+        <form id="form" class="flex flex-col w-[95%] md:w-[50%] mx-auto">
+
+            <label id="label-phrase" for="phrase" class="text-indigo-600 text-xl py-3 font-semibold">Type Your Phrases</label>
+            <textarea id="phrase" class="text-xl h-[100px] rounded font-bold text-indigo-600 outline-none focus:border-2 border-purple-700"></textarea>
+
+            <label id="label-input" for="name" class="font-semibold text-indigo-600 text-xl py-3">Type Your Name</label>
+            <input type="text" id="name" class="text-xl p-2 font-bold text-indigo-600 rounded outline-none focus:border-2 delay-100 border-purple-700">
+
+            <input id="submit-input" type="submit" value="Send" class="py-2 my-4 bg-indigo-600 hover:bg-indigo-800 hover:w-[55%] hover:text-gray-200 transition-all rounded font-bold text-xl cursor-pointer text-white mx-auto w-[50%]">
+
+        </form>
+        <div id="alerts" class="my-5"></div>
+        <div id="phrase-cnt" class="flex flex-col justify-center">
+            <q id="message" class="italic capitalize text-3xl text-center font-light">Your Phrase Will Appear Here</q>
+            <small id="author" class="capitalize text-center md:text-left text-[15px] font-bold">Your Name Will Appear Here</small>
+        </div>
+    </div>
+
+    <script src="init.js"></script>
+</body>
+</html>
